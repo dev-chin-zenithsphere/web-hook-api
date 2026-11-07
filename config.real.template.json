@@ -1,0 +1,15 @@
+{
+  "http": { "host": "127.0.0.1", "port": 3000 },
+  "mode": "real",
+  "tcp": {
+    "role": null, "host": null, "port": null,
+    "connectTimeoutMs": 3000, "idleTimeoutMs": null, "reconnectDelayMs": 1000, "maxReconnectDelayMs": 10000,
+    "adapter": null,
+    "framing": { "delimiter": null, "maxReceiveBufferBytes": 65536 },
+    "encoding": null, "serverConnectionPolicy": "single-reject",
+    "captureRaw": { "enabled": false, "format": "hex", "maxCaptureBytes": 4096 }
+  },
+  "webhook": { "enabled": false, "url": null, "timeoutMs": 2000, "retry": 2, "retryDelayMs": 250, "maxQueueSize": 100 },
+  "storage": { "maxResults": 500 }, "log": { "path": "logs/gateway.log", "maxBytes": 1048576 },
+  "shutdown": { "webhookDrainTimeoutMs": 5000 }
+}

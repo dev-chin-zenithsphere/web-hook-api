@@ -1,0 +1,30 @@
+{
+  "name": "anritsu-checkweigher-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock-first TCP to HTTP/Webhook gateway for checkweigher results",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test",
+    "pm2:start": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 start",
+    "pm2:restart": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 restart",
+    "pm2:stop": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 stop",
+    "pm2:delete": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 delete",
+    "pm2:status": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 status",
+    "pm2:logs": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 logs",
+    "pm2:flush": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 flush",
+    "pm2:monit": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 monit",
+    "pm2:logrotate": "powershell -ExecutionPolicy Bypass -File .\\scripts\\pm2.ps1 logrotate"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "pm2": "^7.0.4"
+  }
+}
